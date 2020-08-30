@@ -94,7 +94,13 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-ssh-add -q -A
+case `uname` in
+    Darwin)
+        ssh-add -q -A
+    ;;
+    # Linux)
+    # ;;
+esac
 
 # https://github.com/zsh-users/zsh/blob/master/Functions/Zle/url-quote-magic
 autoload -Uz url-quote-magic
