@@ -1,0 +1,1 @@
+/Users/hideo54/.zshrc
