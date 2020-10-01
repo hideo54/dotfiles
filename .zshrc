@@ -76,12 +76,9 @@ function m2ts2mp4() {
   ffmpeg -i $1 -vcodec h264 -c:s mov_text ${1%m2ts}mp4
 }
 
-function animeTs2mp4 () {
-  ffmpeg -i $1 -vf bwdif=1 -vcodec h264 -tune animation -crf 18 -preset slow ${1%ts}mp4
-}
-
 function animeM2ts2mp4 () {
   ffmpeg -i $1 -vf bwdif=1 -vcodec h264 -tune animation -crf 18 -preset slow ${1%m2ts}mp4
+  touch -cm -d "$(stat -c "%.19y" $1)" ${1%m2ts}mp4
 }
 
 function m3u82mp4() {
