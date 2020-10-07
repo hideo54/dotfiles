@@ -69,7 +69,7 @@ function saty() {
 }
 
 function mkv2mp4() {
-  ffmpeg -i $1 -vcodec h264 -acodec copy -c:s dvdsub ${1%mkv}mp4
+  ffmpeg -i $1 -vf bwdif=1 -vcodec h264 -crf 18 -preset slow -acodec copy -c:s dvdsub ${1%mkv}mp4
 }
 
 function m2ts2mp4() {
