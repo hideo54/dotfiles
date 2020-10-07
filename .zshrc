@@ -77,8 +77,9 @@ function m2ts2mp4() {
 }
 
 function animeM2ts2mp4 () {
-  ffmpeg -i $1 -vf bwdif=1 -vcodec h264 -tune animation -crf 18 -preset slow ${1%m2ts}mp4
-  touch -cm -d "$(stat -c "%.19y" $1)" ${1%m2ts}mp4
+  stream=(`ffmpeg -i "$1" 2>&1 | grep "Audio" | grep -o -e "0:[0-9]*" | sed -e "s/0:/-map 0:/"`)
+  ffmpeg -i "$1" -vf bwdif=1 -vcodec h264 -tune animation -crf 18 -preset slow -map 0:v ${stream[@]} "${1%m2ts}mp4"
+  touch -cm -d "$(stat -c "%.19y" $1)" "${1%m2ts}mp4"
 }
 
 function m3u82mp4() {
