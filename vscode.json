@@ -1,0 +1,46 @@
+{
+    "files.autoSave": "onWindowChange",
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 17,
+    "editor.copyWithSyntaxHighlighting": false,
+    "python.jediEnabled": false,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontSize": 17,
+    "workbench.startupEditor": "newUntitledFile",
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.tree.indent": 20,
+    "workbench.commandPalette.history": 83825,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Pylance",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "go.formatTool": "goimports",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "python.showStartPage": false,
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "/Users/hideo54/.pyenv/versions/3.8.1/lib/python3.8/site-packages"
+    ],
+    "files.insertFinalNewline": true,
+    "git.autofetch": true,
+    "workbench.editor.decorations.badges": true,
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": "{{put-password-here}}"
+        }
+    ],
+    "terminal.integrated.tabs.enabled": false
+}
