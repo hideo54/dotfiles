@@ -100,7 +100,9 @@ mas install 1295203466 # Microsoft Remote Desktop
 
 # Install userscripts made by hideo54
 curl https://api.github.com/repos/hideo54/userscripts/contents | jq '.[] | .path | "https://raw.githubusercontent.com/hideo54/userscripts/master/" + select(.|endswith(".user.js"))' | xargs open
+curl https://api.github.com/repos/hideo54/userscripts/contents | jq '.[] | .path | "https://raw.githubusercontent.com/hideo54/userscripts/master/" + select(.|endswith(".user.css"))' | xargs open
 
 # Set up essential git config
 git config --global user.email "hideo54@hideo54.com" 
 git config --global user.name "Hideo Yasumoto"
+git config pull.rebase false
