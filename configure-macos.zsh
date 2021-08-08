@@ -103,6 +103,6 @@ curl https://api.github.com/repos/hideo54/userscripts/contents | jq '.[] | .path
 curl https://api.github.com/repos/hideo54/userscripts/contents | jq '.[] | .path | "https://raw.githubusercontent.com/hideo54/userscripts/master/" + select(.|endswith(".user.css"))' | xargs open
 
 # Set up essential git config
-git config --global user.email "hideo54@hideo54.com" 
+git config --global user.email "hideo54@hideo54.com"
 git config --global user.name "Hideo Yasumoto"
 git config pull.rebase false
