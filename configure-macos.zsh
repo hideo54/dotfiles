@@ -83,6 +83,7 @@ brew install 1password # because Mac App Store version does not support device l
 
 # Fonts
 brew tap homebrew/cask-fonts
+brew install font-noto-sans-cjk-jp
 brew install font-ricty-diminished
 
 # Set up menubar applications
