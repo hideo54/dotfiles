@@ -64,6 +64,7 @@ echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
 source ~/.zprofile
 
 # Casks
+brew install bettertouchtool
 brew install clipy
 brew install cmd-eikana
 brew install discord
@@ -72,6 +73,7 @@ brew install google-japanese-ime
 brew install iterm2
 brew install keepingyouawake
 brew install macos-trash
+brew install mactex-no-gui
 brew install mongodb-compass
 brew install ngrok
 brew install visual-studio-code
@@ -85,6 +87,7 @@ brew install font-ricty-diminished
 
 # Set up menubar applications
 open -a /Applications/⌘英かな.app
+open -a /Applications/BetterTouchTool.app
 open -a /Applications/Clipy.app
 open -a /Applications/KeepingYouAwake.app
 
