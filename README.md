@@ -10,7 +10,7 @@
 
 ## for Windows
 
-1. ``cp .zshrc ~/` on WSL.
+1. `cp .zshrc ~/` on WSL.
 1. VS Code: `cp vscode.json /mnt/c/Users/hideo54/AppData/Roaming/Code/User/settings.json` on WSL. Restarting VS Code is required to reflect font settings.
 1. VS Code Extensions: `for e in $(cat vscode-extensions.txt); do code --install-extension $e; done` on WSL. Some may fail.
 1. TBA
