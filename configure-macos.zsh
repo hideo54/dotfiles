@@ -72,6 +72,7 @@ brew install google-chrome
 brew install google-japanese-ime
 brew install iterm2
 brew install keepingyouawake
+brew install krisp # Reboot required for audio devices
 brew install macos-trash
 brew install mactex-no-gui
 brew install mongodb-compass
