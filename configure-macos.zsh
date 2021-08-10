@@ -110,4 +110,4 @@ curl https://api.github.com/repos/hideo54/userscripts/contents | jq '.[] | .path
 # Set up essential git config
 git config --global user.email "hideo54@hideo54.com"
 git config --global user.name "Hideo Yasumoto"
-git config pull.rebase false
+git config --global pull.rebase false
