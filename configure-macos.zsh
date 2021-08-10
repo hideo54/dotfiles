@@ -64,7 +64,6 @@ echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
 source ~/.zprofile
 
 # Casks
-brew install bettertouchtool
 brew install clipy
 brew install cmd-eikana
 brew install discord
@@ -99,6 +98,7 @@ open -a /Applications/Google\ Chrome.app
 # Mac App Store applications
 open -a /System/Applications/App\ Store.app # sign in manually
 mas install 411213048 # LadioCast
+mas install 417375580 # BetterSnapTool
 mas install 497799835 # Xcode
 mas install 539883307 # LINE
 mas install 1295203466 # Microsoft Remote Desktop
