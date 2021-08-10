@@ -69,20 +69,41 @@ function saty() {
 }
 
 function mkv2mp4() {
-  ffmpeg -i $1 -vcodec h264 -acodec copy -c:s dvdsub ${1%mkv}mp4
+  ffmpeg -i $1 -vf bwdif=1 -vcodec h264 -crf 18 -preset slow -acodec copy -c:s dvdsub ${1%mkv}mp4
 }
 
 function m2ts2mp4() {
-  ffmpeg -i $1 -vcodec h264 -c:s mov_text ${1%m2ts}mp4
+  stream=(`ffmpeg -i "$1" 2>&1 | grep "Audio" | grep -o -e "0:[0-9]*" | sed -e "s/0:/-map 0:/"`)
+  # numOfSubs=(`ffprobe -i "$1" -show_streams -select_streams s -loglevel fatal | grep '\[STREAM\]' | wc -l`)
+  # if [ $numOfSubs -gt 0 ]; then
+  if [ echo $1 | grep 字 ]; then
+    ffmpeg -fix_sub_duration -itsoffset 0.7 -i "$1" "${1%.*}.srt"
+    ffmpeg -i "$1" -vf bwdif=1 -vcodec h264 -crf 18 -preset slow -map 0:v ${stream[@]} -b:a 192k -map -0:s -c:s mov_text "${1%.*}.mp4"
+  else
+    ffmpeg -i "$1" -vf bwdif=1 -vcodec h264 -crf 18 -preset slow -map 0:v ${stream[@]} -b:a 192k "${1%.*}.mp4"
+  fi
+  touch -cm -d "$(stat -c "%.19y" $1)" "${1%.*}.mp4"
 }
 
-function animeM2ts2mp4 () {
-  ffmpeg -i $1 -vf bwdif=1 -vcodec h264 -tune animation -crf 18 -preset slow ${1%m2ts}mp4
-  touch -cm -d "$(stat -c "%.19y" $1)" ${1%m2ts}mp4
+function anime2mp4 () {
+  stream=(`ffmpeg -i "$1" 2>&1 | grep "Audio" | grep -o -e "0:[0-9]*" | sed -e "s/0:/-map 0:/"`)
+  # numOfSubs=(`ffprobe -i "$1" -show_streams -select_streams s -loglevel fatal | grep '\[STREAM\]' | wc -l`)
+  # if [ $numOfSubs -gt 0 ]; then
+  if [ echo $1 | grep 字 ]; then
+    #ffmpeg -fix_sub_duration -itsoffset 0.7 -i "$1" "${1%.*}.srt"
+    #ffmpeg -i "$1" -vf bwdif=1 -vcodec h264 -tune animation -crf 18 -preset slow -map 0:v ${stream[@]} "${1%.*}.mp4"
+  else
+    ffmpeg -i "$1" -vf bwdif=1 -vcodec h264 -tune animation -crf 18 -b:a 192k -preset slow -map 0:v ${stream[@]} "${1%.*}.mp4"
+  fi
+  touch -cm -d "$(stat -c "%.19y" $1)" "${1%.*}.mp4"
 }
 
 function m3u82mp4() {
   ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i $1 -movflags faststart -c copy ${1%m3u8}mp4
+}
+
+function touchWithFile() {
+  echo $1 | sed -r 's/^\[([0-9]+)-([0-9]+).*$/\1\2/' | xargs -I {} touch -cm -t {} $1
 }
 
 if [ -f '/Applications/Hex\ Fiend.app' ]; then alias bin='open -a /Applications/Hex\ Fiend.app'; fi
