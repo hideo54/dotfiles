@@ -10,8 +10,4 @@
 
 ## 日本語等幅フォント
 
-日本語等幅フォントとして [Firge](https://github.com/yuru7/Firge) を気に入ったが、Homebrew の [cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts) には収録されていない。足そうかと思ったが、[CONTRIBUTING.md](https://github.com/Homebrew/homebrew-cask-fonts/blob/master/CONTRIBUTING.md) に
-
-> We accept fonts from other sources but they must be provably popular, like JetBrains Mono and iA Fonts.
-
-と書いてあるのを見てチキってしまった。というわけで、[手動でインストール](https://github.com/yuru7/Firge/releases)されたい。
+日本語等幅フォントとして [Firge](https://github.com/yuru7/Firge) を気に入ったが、Homebrew の [cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts) には収録されていない (PR申請中)。[手動でインストール](https://github.com/yuru7/Firge/releases)されたい。
