@@ -67,7 +67,7 @@ source ~/.zprofile
 latest_ruby_version=$(rbenv install -L | grep -e '^\d.*\d$' | tail -n 1)
 rbenv install $latest_ruby_version
 rbenv global $latest_ruby_version
-echo 'eval "$(rbenv init --path)"' >> ~/.zprofile
+echo 'eval "$(rbenv init -)"' >> ~/.zprofile
 source ~/.zprofile
 
 # Casks
