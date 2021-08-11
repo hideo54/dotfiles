@@ -82,9 +82,9 @@ brew install zoom
 brew install 1password # because Mac App Store version does not support device license
 
 # Fonts
-brew tap homebrew/cask-fonts
+brew tap hideo54/cask-fonts git@github.com:hideo54/homebrew-cask-fonts.git
 brew install font-noto-sans-cjk-jp
-brew install font-ricty-diminished
+brew install font-firge
 
 # Set up menubar applications
 open -a /Applications/⌘英かな.app
