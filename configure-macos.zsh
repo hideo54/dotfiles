@@ -52,6 +52,7 @@ brew install jq
 brew install mas
 brew install n
 brew install pyenv
+brew install rbenv
 
 # Install the latest Node.js
 sudo n latest
@@ -61,6 +62,12 @@ latest_python_version=$(pyenv install --list | grep -E ' 3\.\d\.\d' | tail -n 1 
 pyenv install $latest_python_version
 pyenv global $latest_python_version
 echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+source ~/.zprofile
+
+latest_ruby_version=$(rbenv install -L | grep -e '^\d.*\d$' | tail -n 1)
+rbenv install $latest_ruby_version
+rbenv global $latest_ruby_version
+echo 'eval "$(rbenv init --path)"' >> ~/.zprofile
 source ~/.zprofile
 
 # Casks
