@@ -16,8 +16,8 @@ function lss() {
   ls -lh -d $(find $1)
 }
 
-# Use rmtrash (move files to trash)
-if [ -f '/usr/local/bin/rmtrash' ]; then alias rm='rmtrash'; fi
+# Use macos-trash (move files to trash)
+if [ -f '/opt/homebrew/bin/trash ' ]; then alias rm='trash'; fi
 
 alias conf='vim ~/.zshrc && source ~/.zshrc'
 
