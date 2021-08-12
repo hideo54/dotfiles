@@ -17,7 +17,7 @@ function lss() {
 }
 
 # Use macos-trash (move files to trash)
-if [ -f '/opt/homebrew/bin/trash ' ]; then alias rm='trash'; fi
+if [ -f '/opt/homebrew/bin/trash' ]; then alias rm='trash'; fi
 
 alias conf='vim ~/.zshrc && source ~/.zshrc'
 
