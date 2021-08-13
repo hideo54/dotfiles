@@ -118,3 +118,4 @@ curl https://api.github.com/repos/hideo54/userscripts/contents | jq '.[] | .path
 git config --global user.email "hideo54@hideo54.com"
 git config --global user.name "Hideo Yasumoto"
 git config --global pull.rebase false
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh > ~/.git-completion.zsh
