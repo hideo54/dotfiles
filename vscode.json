@@ -2,7 +2,7 @@
     "files.autoSave": "onWindowChange",
     "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
-    "editor.fontFamily": "'Firge', 'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Firge Console', 'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 16,
     "editor.copyWithSyntaxHighlighting": false,
     "python.jediEnabled": false,
