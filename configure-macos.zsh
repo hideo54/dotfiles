@@ -41,8 +41,11 @@ mkdir ~/Products
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/hideo54/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+UNAME_MACHINE="$(uname -m)"
+if [[ "$UNAME_MACHINE" == "arm64" ]]; then # なんで arm64 に限ってるのか正直わからんが、上のスクリプトに従っている
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 sudo softwareupdate --install-rosetta
 
