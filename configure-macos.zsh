@@ -50,8 +50,11 @@ fi
 sudo softwareupdate --install-rosetta
 
 # Formulae
+brew install ffmpeg
 brew install go
+brew install imagemagick
 brew install jq
+brew install macos-trash
 brew install mas
 brew install n
 brew install pyenv
@@ -74,31 +77,34 @@ echo 'eval "$(rbenv init -)"' >> ~/.zprofile
 source ~/.zprofile
 
 # Casks
+brew install 1password # because Mac App Store version does not support device license
+brew install blackhole-2ch
+brew install blackhole-16ch
 brew install clipy
 brew install cmd-eikana
+brew install db-browser-for-sqlite
+brew install firefox
+brew install firefox-developer-edition
 brew install discord
 brew install google-chrome
 brew install google-japanese-ime
 brew install iterm2
 brew install keepingyouawake
 brew install krisp # Reboot required for audio devices
-brew install macos-trash
 brew install mactex-no-gui
 brew install mongodb-compass
 brew install ngrok
 brew install visual-studio-code
 brew install vlc
 brew install zoom
-brew install 1password # because Mac App Store version does not support device license
 
 # Fonts
 brew tap hideo54/cask-fonts git@github.com:hideo54/homebrew-cask-fonts.git
-brew install font-noto-sans-cjk-jp
 brew install font-firge
+brew install font-noto-sans-cjk-jp
 
 # Set up menubar applications
 open -a /Applications/⌘英かな.app
-open -a /Applications/BetterTouchTool.app
 open -a /Applications/Clipy.app
 open -a /Applications/KeepingYouAwake.app
 
