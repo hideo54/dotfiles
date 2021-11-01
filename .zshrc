@@ -122,7 +122,7 @@ eval "$(rbenv init -)"
 
 case `uname` in
     Darwin)
-        ssh-add -q -A
+        ssh-add -q --apple-use-keychain
     ;;
     # Linux)
     # ;;
