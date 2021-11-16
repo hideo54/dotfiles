@@ -74,6 +74,13 @@ function saty() {
   open ${1%saty}pdf
 }
 
+if [ -f '/opt/homebrew/bin/qpdf' ]; then
+  function decrypt-pdf() {
+    qpdf --decrypt --password=$2 $1 ${1%.pdf}_decrypted.pdf
+    mv ${1%.pdf}_decrypted.pdf $1
+  }
+;fi
+
 function mkv2mp4() {
   ffmpeg -i $1 -vf bwdif=1 -vcodec h264 -crf 18 -preset slow -acodec copy -c:s dvdsub ${1%mkv}mp4
 }

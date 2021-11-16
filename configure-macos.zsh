@@ -94,6 +94,7 @@ brew install krisp # Reboot required for audio devices
 brew install mactex-no-gui
 brew install mongodb-compass
 brew install ngrok
+brew install qpdf
 brew install visual-studio-code
 brew install vlc
 brew install zoom
