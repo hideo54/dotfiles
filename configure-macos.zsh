@@ -50,6 +50,7 @@ fi
 sudo softwareupdate --install-rosetta
 
 # Formulae
+brew install emacs
 brew install ffmpeg
 brew install go
 brew install imagemagick
@@ -58,7 +59,9 @@ brew install macos-trash
 brew install mas
 brew install n
 brew install pyenv
+brew install qpdf
 brew install rbenv
+brew install yt-dlp/taps/yt-dlp
 
 # Install the latest Node.js
 sudo n latest
@@ -80,21 +83,23 @@ source ~/.zprofile
 brew install 1password # because Mac App Store version does not support device license
 brew install blackhole-2ch
 brew install blackhole-16ch
+brew install blackhole-64ch
 brew install clipy
 brew install cmd-eikana
 brew install db-browser-for-sqlite
+brew install discord
 brew install firefox
 brew install firefox-developer-edition
-brew install discord
 brew install google-chrome
+brew install google-cloud-sdk
 brew install google-japanese-ime
 brew install iterm2
 brew install keepingyouawake
 brew install krisp # Reboot required for audio devices
 brew install mactex-no-gui
 brew install mongodb-compass
+brew install monitorcontrol
 brew install ngrok
-brew install qpdf
 brew install visual-studio-code
 brew install vlc
 brew install zoom
@@ -103,6 +108,7 @@ brew install zoom
 brew tap hideo54/cask-fonts git@github.com:hideo54/homebrew-cask-fonts.git
 brew install font-firge
 brew install font-noto-sans-cjk-jp
+brew install font-train-one
 
 # Set up menubar applications
 open -a /Applications/⌘英かな.app
