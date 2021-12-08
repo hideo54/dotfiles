@@ -59,12 +59,13 @@ function gpp() {
 }
 
 function tehu() {
-  platex $1
-  platex $1
+  uplatex $1
+  uplatex $1
   dvipdfmx ${1%tex}dvi
   rm ${1%tex}log
   rm ${1%tex}aux
   rm ${1%tex}dvi
+  rm ${1%tex}out
   open ${1%tex}pdf
 }
 
