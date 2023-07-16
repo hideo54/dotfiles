@@ -138,3 +138,9 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 
 # iTerm2 Shell Integration
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
+
+# userChrome.css for Firefox
+FIREFOX_PROFILE_DIR_PATH="/Users/hideo54/Library/Application Support/Firefox/Profiles"
+FIREFOX_PROFILE_DIR_PATH="${FIREFOX_PROFILE_DIR_PATH}/`ls $FIREFOX_PROFILE_DIR_PATH | grep .default-release`"
+mv chrome/ $FIREFOX_PROFILE_DIR_PATH
+echo "Access to about:config and enable `toolkit.legacyUserProfileCustomizations.stylesheets`"
