@@ -135,3 +135,6 @@ git config --global user.email "hideo54@hideo54.com"
 git config --global user.name "Hideo Yasumoto"
 git config --global pull.rebase false
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh > ~/.git-completion.zsh
+
+# iTerm2 Shell Integration
+curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
