@@ -59,7 +59,6 @@ brew install macos-trash
 brew install mas
 brew install n
 brew install pyenv
-brew install qpdf
 brew install rbenv
 brew install yt-dlp/taps/yt-dlp
 
@@ -86,16 +85,13 @@ brew install blackhole-16ch
 brew install blackhole-64ch
 brew install clipy
 brew install cmd-eikana
-brew install db-browser-for-sqlite
 brew install discord
 brew install firefox
-brew install firefox-developer-edition
 brew install google-chrome
 brew install google-cloud-sdk
 brew install google-japanese-ime
 brew install iterm2
 brew install keepingyouawake
-brew install krisp # Reboot required for audio devices
 brew install mactex-no-gui
 brew install mongodb-compass
 brew install monitorcontrol
@@ -108,7 +104,6 @@ brew install zoom
 brew tap hideo54/cask-fonts git@github.com:hideo54/homebrew-cask-fonts.git
 brew install font-firge
 brew install font-noto-sans-cjk-jp
-brew install font-train-one
 
 # Set up menubar applications
 open -a /Applications/⌘英かな.app
@@ -124,7 +119,6 @@ mas install 411213048 # LadioCast
 mas install 417375580 # BetterSnapTool
 mas install 497799835 # Xcode
 mas install 539883307 # LINE
-mas install 1295203466 # Microsoft Remote Desktop
 
 # Install userscripts made by hideo54
 curl https://api.github.com/repos/hideo54/userscripts/contents | jq '.[] | .path | "https://raw.githubusercontent.com/hideo54/userscripts/master/" + select(.|endswith(".user.js"))' | xargs open
