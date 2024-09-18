@@ -83,12 +83,18 @@ function gpp() {
 
 function tehu() {
   uplatex $1
+  upbibtex ${1%tex}aux
+  uplatex $1
   uplatex $1
   dvipdfmx ${1%tex}dvi
-  rm ${1%tex}log
   rm ${1%tex}aux
+  rm ${1%tex}bbl
+  rm ${1%tex}blg
   rm ${1%tex}dvi
+  rm ${1%tex}log
   rm ${1%tex}out
+  rm ${1%tex}bcf
+  rm ${1%tex}run.xml
   open ${1%tex}pdf
 }
 
