@@ -98,12 +98,6 @@ function tehu() {
   open ${1%tex}pdf
 }
 
-function saty() {
-  satysfi $1 -o ${1%saty}pdf
-  rm ${1%saty}satysfi-aux
-  open ${1%saty}pdf
-}
-
 if [ -f '/opt/homebrew/bin/qpdf' ]; then
   function decrypt-pdf() {
     qpdf --decrypt --password=$2 $1 ${1%.pdf}_decrypted.pdf
