@@ -1,9 +1,32 @@
-PROMPT='%K{blue}%* %~%k $ '
+local messages=(
+    "Great power comes with great responsibility."
+    "A journey of a thousand miles begins with a single step."
+    "Fortune favors the bold."
+    "Actions speak louder than words."
+    "What goes around comes around."
+    "The pen is mightier than the sword."
+    "Time and tide wait for no man."
+    "Every cloud has a silver lining."
+    "Necessity is the mother of invention."
+    "Rome wasn't built in a day."
+)
+
+PROMPT="%K{green}%D{%H:%M:%S}%k
+
+%K{#444444}%~%k $ "
 HISTFILE=${HOME}/.zsh_history
 SAVEHIST=1000
 setopt appendhistory
 
 set -u
+
+preexec() {
+    local index=$(( RANDOM % ${#messages[@]} ))
+    local current_time=$(date '+%H:%M:%S')
+
+    echo -e "\e[42m$current_time\e[0m \e[32m${messages[$index]}\e[0m\n"
+}
+
 
 alias l='ls'
 alias s='ls'
