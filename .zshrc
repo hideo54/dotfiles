@@ -149,6 +149,10 @@ function touchWithFile() {
   echo $1 | sed -r 's/^\[([0-9]+)-([0-9]+).*$/\1\2/' | xargs -I {} touch -cm -t {} $1
 }
 
+function yt-dlp-sub() {
+  yt-dlp --write-auto-sub --sub-lang ja --convert-subs=srt --skip-download $1
+}
+
 if [ -f '/Applications/Hex\ Fiend.app' ]; then alias bin='open -a /Applications/Hex\ Fiend.app'; fi
 
 export PYENV_ROOT="$HOME/.pyenv"
