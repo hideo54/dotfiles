@@ -15,3 +15,9 @@
 1. VS Code Extensions: `for e in $(cat vscode-extensions.txt); do code --install-extension $e; done` on WSL. Some may fail.
 1. Google IME: `cp JapaneseInput/*.db /mnt/c/Users/hideo/AppData/LocalLow/Google/Google\ Japanese\ Input` (Reboot required)
 1. TBA
+
+## for random Wikipedia articles
+
+```
+*/5 * * * * tsx /Users/hideo54/Products/dotfiles/save-random-wikipedia-article.ts
+```
