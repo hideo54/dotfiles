@@ -30,11 +30,7 @@ function lss() {
 # Use macos-trash (move files to trash)
 if [ -f '/opt/homebrew/bin/trash' ]; then alias rm='trash'; fi
 
-if [ -f "${HOME}/.git-completion.zsh" ]; then
-  fpath=(~/.zsh $fpath);
-  zstyle ':completion:*:*:git:*' script ~/.git-completion.zsh;
-  autoload -Uz compinit && compinit;
-fi
+fpath=(~/.zsh $fpath)
 
 alias conf='vim ~/.zshrc && source ~/.zshrc'
 
