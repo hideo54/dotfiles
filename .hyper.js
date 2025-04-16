@@ -10,7 +10,7 @@ module.exports = {
         // default font size in pixels for all tabs
         fontSize: 12,
         // font family with optional fallbacks
-        fontFamily: 'Monaco, Consolas, "Lucida Console", monospace',
+        fontFamily: 'Firge, monospace',
         // default font weight: 'normal' or 'bold'
         fontWeight: 'normal',
         // font weight for bold characters: 'normal' or 'bold'
@@ -31,7 +31,7 @@ module.exports = {
         foregroundColor: '#fff',
         // terminal background color
         // opacity is only supported on macOS
-        backgroundColor: '#000',
+        backgroundColor: '#00000088',
         // terminal selection color
         selectionColor: 'rgba(248,28,229,0.3)',
         // border color (window, tabs)
