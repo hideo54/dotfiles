@@ -19,5 +19,6 @@
 ## for random Wikipedia articles
 
 ```
-*/5 * * * * tsx /Users/hideo54/Products/dotfiles/save-random-wikipedia-article.ts
+SHELL="/bin/zsh"
+* * * * * . $HOME/.nvm/nvm.sh && tsx $HOME/Products/dotfiles/save-random-wikipedia-article.ts
 ```
