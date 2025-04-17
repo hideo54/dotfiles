@@ -32,6 +32,7 @@ const main = async () => {
         .replace(/^.*は、/, '')
         .replace(`${titleShort}は`, '')
         .replace(/である$/, '');
+    if (description.includes('\n')) return;
     const outputText = `%F{green}${title}%f ${description}`;
     await fs.writeFile('/Users/hideo54/random-wikipedia-article.txt', outputText, 'utf-8');
 };
