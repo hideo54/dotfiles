@@ -15,6 +15,8 @@ preexec() {
     echo -e "\e[42m$current_time\e[0m\n"
 }
 
+autoload -U compinit
+compinit -u
 
 alias l='ls'
 alias s='ls'
@@ -29,8 +31,6 @@ function lss() {
 
 # Use macos-trash (move files to trash)
 if [ -f '/opt/homebrew/bin/trash' ]; then alias rm='trash'; fi
-
-fpath=(~/.zsh $fpath)
 
 alias conf='vim ~/.zshrc && source ~/.zshrc'
 
@@ -164,12 +164,9 @@ if [ -f '/Users/hideo54/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hideo54
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/hideo54/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hideo54/google-cloud-sdk/completion.zsh.inc'; fi
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
 export GPG_TTY=$(tty)
 
 eval "$(direnv hook zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
