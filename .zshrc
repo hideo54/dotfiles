@@ -1,6 +1,6 @@
 setopt PROMPT_SUBST # to call functions in PROMPT every time
 PROMPT='
-%K{green}%D{%H:%M:%S}%k $(cat /Users/hideo54/random-wikipedia-article.txt)
+%K{green}%D{%H:%M:%S}%k
 
 %F{#444444}%~%f $ '
 HISTFILE=${HOME}/.zsh_history
@@ -133,9 +133,6 @@ function yt-dlp-sub() {
 
 if [ -f '/Applications/Hex\ Fiend.app' ]; then alias bin='open -a /Applications/Hex\ Fiend.app'; fi
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 eval "$(rbenv init -)"
 
@@ -170,3 +167,17 @@ eval "$(direnv hook zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/hideo54/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# pnpm
+export PNPM_HOME="/Users/hideo54/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="$HOME/.local/bin:$PATH"
